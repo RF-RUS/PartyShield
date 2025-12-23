@@ -7,6 +7,7 @@ export const translations = {
       pricing: 'Цены',
       try: 'Попробовать',
       support: 'Поддержка',
+      refer: 'Реферальная программа',
     },
     home: {
       title: 'Защитите свою приватность с PartyShield',
@@ -132,6 +133,46 @@ export const translations = {
         title: 'Часто задаваемые вопросы',
       },
     },
+    refer: {
+      title: 'Реферальная программа',
+      subtitle: 'Приглашайте друзей и получайте бонусы',
+      description: 'Приглашайте друзей использовать PartyShield и получайте вознаграждения за каждого приглашенного пользователя.',
+      howItWorks: {
+        title: 'Как это работает',
+        step1: {
+          title: 'Получите реферальную ссылку',
+          desc: 'Скопируйте вашу уникальную реферальную ссылку',
+        },
+        step2: {
+          title: 'Поделитесь с друзьями',
+          desc: 'Отправьте ссылку друзьям через социальные сети, мессенджеры или email',
+        },
+        step3: {
+          title: 'Получайте бонусы',
+          desc: 'За каждого друга, который подпишется по вашей ссылке, вы получаете бонус',
+        },
+      },
+      benefits: {
+        title: 'Преимущества программы',
+        benefit1: 'Бонусы за каждого приглашенного пользователя',
+        benefit2: 'Накопительная система вознаграждений',
+        benefit3: 'Простое отслеживание рефералов',
+      },
+      yourReferral: {
+        title: 'Ваша реферальная ссылка',
+        copy: 'Скопировать ссылку',
+        copied: 'Скопировано!',
+      },
+      stats: {
+        title: 'Ваша статистика',
+        referrals: 'Приглашено друзей',
+        bonus: 'Заработано бонусов',
+      },
+    },
+    privacy: {
+      title: 'Политика конфиденциальности',
+      lastUpdated: 'Последнее обновление',
+    },
     footer: {
       description: 'PartyShield - ваш надежный партнер в защите приватности',
       links: {
@@ -149,6 +190,7 @@ export const translations = {
       pricing: 'Pricing',
       try: 'Try',
       support: 'Support',
+      refer: 'Referral Program',
     },
     home: {
       title: 'Protect Your Privacy with PartyShield',
@@ -273,6 +315,46 @@ export const translations = {
       faq: {
         title: 'Frequently Asked Questions',
       },
+    },
+    refer: {
+      title: 'Referral Program',
+      subtitle: 'Invite friends and earn rewards',
+      description: 'Invite your friends to use PartyShield and earn rewards for each referred user.',
+      howItWorks: {
+        title: 'How it works',
+        step1: {
+          title: 'Get your referral link',
+          desc: 'Copy your unique referral link',
+        },
+        step2: {
+          title: 'Share with friends',
+          desc: 'Send the link to friends via social media, messengers or email',
+        },
+        step3: {
+          title: 'Earn rewards',
+          desc: 'For each friend who signs up using your link, you get a bonus',
+        },
+      },
+      benefits: {
+        title: 'Program benefits',
+        benefit1: 'Bonuses for each referred user',
+        benefit2: 'Accumulative reward system',
+        benefit3: 'Easy referral tracking',
+      },
+      yourReferral: {
+        title: 'Your referral link',
+        copy: 'Copy link',
+        copied: 'Copied!',
+      },
+      stats: {
+        title: 'Your statistics',
+        referrals: 'Friends referred',
+        bonus: 'Bonuses earned',
+      },
+    },
+    privacy: {
+      title: 'Privacy Policy',
+      lastUpdated: 'Last updated',
     },
     footer: {
       description: 'PartyShield - your reliable partner in privacy protection',

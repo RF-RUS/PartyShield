@@ -21,6 +21,7 @@ export function Header() {
     { href: '/pricing', label: t.nav.pricing },
     { href: '/try', label: t.nav.try },
     { href: '/support', label: t.nav.support },
+    { href: '/refer', label: t.nav.refer },
   ]
 
   return (
