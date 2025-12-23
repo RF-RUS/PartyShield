@@ -25,7 +25,7 @@ export default function Refer() {
   const activeReferrals: ActiveReferral[] = [
     { name: 'Александра Ш.', link: `https://t.me/PartyShield_bot?start=ref_EMnGR1` },
     { name: 'Алексей М.', link: `https://partyshield.space?ref=USER12345&u=2` },
-    // { name: 'Alex R.', link: `https://partyshield.space?ref=USER12345&u=3` },
+    { name: 'Alex R.', link: `https://partyshield.space?ref=USER12345&u=3` },
   ]
 
   const copyReferralLink = async (link: string, index: number) => {
