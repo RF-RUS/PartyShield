@@ -84,9 +84,9 @@ export default function Support() {
       url: '#',
     },
     {
-      title: 'Настройка на Android',
-      platform: 'YouTube',
-      url: '#',
+      title: 'Как поделиться реферальной ссылкой?',
+      platform: 'RuTube',
+      url: 'https://rutube.ru/shorts/33a152b90dbde637b842a941016d5450/',
     },
     {
       title: 'Настройка на iOS',
