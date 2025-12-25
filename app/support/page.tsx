@@ -79,9 +79,9 @@ export default function Support() {
       url: 'https://rutube.ru/shorts/a208937b190a7821a07e12323b85d189',
     },
     {
-      title: 'Настройка на macOS',
-      platform: 'Rumble',
-      url: '#',
+      title: 'Как поделиться подпиской с семьёй?',
+      platform: 'RuTube',
+      url: 'https://rutube.ru/shorts/1908113e5fcf3a99f85126c5c6e6683e/',
     },
     {
       title: 'Как поделиться реферальной ссылкой?',
@@ -89,9 +89,9 @@ export default function Support() {
       url: 'https://rutube.ru/shorts/33a152b90dbde637b842a941016d5450/',
     },
     {
-      title: 'Настройка на iOS',
-      platform: 'Rumble',
-      url: '#',
+      title: 'Как обновить настройки подписки?',
+      platform: 'RuTube',
+      url: 'https://rutube.ru/video/cbdadc4cef7c7469bcc310b324ddfcd4/',
     },
   ]
 
