@@ -13,7 +13,7 @@ export default function Support() {
     document.title = 'Поддержка - PartyShield VPN'
   }, [])
 
-  const telegramUrl = 'https://t.me/c/3425523075/2'
+  const telegramUrl = 'https://t.me/+1aj_Cqy--ztjMDJi'
 
   const faqItems = [
     {

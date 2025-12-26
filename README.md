@@ -90,7 +90,7 @@ npm start
 ## Интеграции
 
 - Telegram-бот: `@PartyShield_bot`
-- Telegram-группа поддержки: `https://t.me/c/3425523075/2`
+- Telegram-группа поддержки: `https://t.me/+1aj_Cqy--ztjMDJi`
 
 ## Дальнейшее развитие
 

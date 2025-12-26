@@ -88,7 +88,7 @@ export default function Privacy() {
         content: `Если у вас есть вопросы о нашей Политике конфиденциальности, пожалуйста, свяжитесь с нами:
 
 • Telegram-бот: @PartyShield_bot
-• Группа поддержки: https://t.me/c/3425523075/2
+• Группа поддержки: https://t.me/+1aj_Cqy--ztjMDJi
 • Email: support@partyshield.space`,
       },
     ],
@@ -169,7 +169,7 @@ To exercise these rights, contact us through Telegram bot @PartyShield_bot or su
         content: `If you have questions about our Privacy Policy, please contact us:
 
 • Telegram bot: @PartyShield_bot
-• Support group: https://t.me/c/3425523075/2
+• Support group: https://t.me/+1aj_Cqy--ztjMDJi
 • Email: support@partyshield.space`,
       },
     ],
