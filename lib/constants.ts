@@ -1,0 +1,5 @@
+export const TELEGRAM_BOT_URL = 'https://t.me/PartyShield_bot'
+export const TELEGRAM_SUPPORT_GROUP_URL = 'https://t.me/+1aj_Cqy--ztjMDJi'
+export const SITE_URL = 'https://partyshield.space'
+export const SITE_NAME = 'PartyShield'
+export const SUPPORT_EMAIL = 'support@partyshield.space'

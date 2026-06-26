@@ -3,25 +3,21 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { Menu, X, Globe } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { LanguageToggle } from '@/components/LanguageToggle'
 
 export function Header() {
-  const { lang, setLang, t } = useLanguage()
+  const { t } = useLanguage()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
 
-  const toggleLanguage = () => {
-    const newLang = lang === 'ru' ? 'en' : 'ru'
-    setLang(newLang)
-  }
-
   const navLinks = [
     { href: '/', label: t.nav.home },
-    { href: '/pricing', label: t.nav.pricing },
-    { href: '/try', label: t.nav.try },
-    { href: '/support', label: t.nav.support },
-    { href: '/refer', label: t.nav.refer },
+    { href: '/pricing/', label: t.nav.pricing },
+    { href: '/try/', label: t.nav.try },
+    { href: '/support/', label: t.nav.support },
+    { href: '/refer/', label: t.nav.refer },
   ]
 
   return (
@@ -50,16 +46,7 @@ export function Header() {
           </div>
 
           <div className="flex items-center space-x-4">
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center space-x-2 px-3 py-2 rounded-lg glass hover:bg-white/10 transition-colors"
-              aria-label="Switch language"
-            >
-              <Globe className="w-4 h-4" />
-              <span className="text-sm font-medium">
-                {lang === 'ru' ? '🇷🇺' : '🇺🇸'}
-              </span>
-            </button>
+            <LanguageToggle />
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -95,4 +82,3 @@ export function Header() {
     </header>
   )
 }
-

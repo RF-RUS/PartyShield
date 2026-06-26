@@ -11,17 +11,27 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
+function readSavedLanguage(): Language {
+  if (typeof window === 'undefined') return 'ru'
+  try {
+    const saved = localStorage.getItem('language')
+    if (saved === 'en' || saved === 'ru') return saved
+  } catch {}
+  return 'ru'
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Language>('ru')
 
   useEffect(() => {
-    const savedLang = localStorage.getItem('language') as Language
-    if (savedLang) setLangState(savedLang)
+    setLangState(readSavedLanguage())
   }, [])
 
   const setLang = (newLang: Language) => {
     setLangState(newLang)
-    localStorage.setItem('language', newLang)
+    try {
+      localStorage.setItem('language', newLang)
+    } catch {}
   }
 
   const t = getTranslations(lang)
@@ -40,4 +50,3 @@ export function useLanguage() {
   }
   return context
 }
-

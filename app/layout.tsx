@@ -5,13 +5,18 @@ import { Footer } from '@/components/Footer'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-  title: 'PartyShield - Безопасный и быстрый VPN',
+  title: {
+    default: 'PartyShield - Безопасный и быстрый VPN',
+    template: '%s | PartyShield VPN',
+  },
   description: 'Защитите свою приватность с PartyShield. Быстрый, безопасный и надежный VPN-сервис с шифрованием военного уровня.',
-  keywords: 'VPN, безопасность, приватность, шифрование, PartyShield',
+  keywords: ['VPN', 'безопасность', 'приватность', 'шифрование', 'PartyShield'],
   openGraph: {
     title: 'PartyShield - Безопасный и быстрый VPN',
     description: 'Защитите свою приватность с PartyShield. Быстрый, безопасный и надежный VPN-сервис.',
     type: 'website',
+    locale: 'ru_RU',
+    alternateLocale: 'en_US',
   },
 }
 
@@ -21,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru">
-      <body>
+    <html lang="ru" suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <LanguageProvider>
           <Header />
           <main className="min-h-screen">
@@ -34,4 +39,3 @@ export default function RootLayout({
     </html>
   )
 }
-

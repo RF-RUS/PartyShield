@@ -47,6 +47,8 @@ export const translations = {
         usd: 'USD',
         rub: 'RUB',
       },
+      perMonth: '/месяц',
+      popular: 'Популярный',
       plans: {
         basic: {
           name: 'Базовый',
@@ -117,6 +119,9 @@ export const translations = {
         },
       },
       botButton: 'Открыть бота в Telegram',
+      readyTitle: 'Готовы начать?',
+      readyDesc: 'Откройте нашего Telegram-бота и следуйте простым инструкциям. Настройка займет всего несколько минут.',
+      openBot: 'Открыть @PartyShield_bot',
     },
     support: {
       title: 'Центр поддержки',
@@ -124,21 +129,62 @@ export const translations = {
       telegram: {
         title: 'Telegram-группа поддержки',
         link: 'Присоединиться к группе',
+        desc: 'Присоединяйтесь к нашей группе поддержки в Telegram для получения помощи и общения с другими пользователями.',
       },
       videos: {
         title: 'Видеоинструкции',
         desc: 'Пошаговые руководства по настройке',
       },
+      openVideo: 'Открыть видео',
       faq: {
         title: 'Часто задаваемые вопросы',
+        items: [
+          {
+            question: 'Как начать использовать PartyShield?',
+            answer: 'Просто откройте нашего Telegram-бота @PartyShield_bot, выберите тарифный план и следуйте инструкциям. Настройка займет всего несколько минут.',
+          },
+          {
+            question: 'На каких устройствах работает PartyShield?',
+            answer: 'PartyShield работает на всех основных платформах: Windows, macOS, Linux, iOS, Android и других устройствах.',
+          },
+          {
+            question: 'Сохраняете ли вы логи?',
+            answer: 'Нет, мы не ведем логи вашей активности. Ваша приватность - наш приоритет.',
+          },
+          {
+            question: 'Какова скорость соединения?',
+            answer: 'Скорость зависит от выбранного тарифа. Премиум-пользователи получают максимальную скорость с приоритетным доступом к серверам.',
+          },
+          {
+            question: 'Можно ли использовать VPN на нескольких устройствах?',
+            answer: 'Да, количество одновременных подключений зависит от вашего тарифного плана. Базовый план поддерживает 1 устройство, Премиум - до 10.',
+          },
+          {
+            question: 'Как получить поддержку?',
+            answer: 'Вы можете обратиться в нашу Telegram-группу поддержки или написать боту @PartyShield_bot в раздел Поддержка. Мы отвечаем 24/7.',
+          },
+        ],
       },
     },
     refer: {
       title: 'Реферальная программа',
       subtitle: 'Приглашайте друзей и получайте бонусы',
       description: 'Приглашайте друзей использовать PartyShield и получайте вознаграждения за каждого приглашенного пользователя.',
+      bonusMechanic: 'За каждого приглашённого друга, который оформит подписку, вы получаете +2 недели использования VPN на текущем тарифе.',
+      bonusAuto: 'Ваши бонусные недели автоматически прибавляются к действующей подписке после активации реферала.',
+      activeReferrals: 'Активных рефералов',
+      activeReferralsDesc: 'Друзья, которые уже оформили подписку по вашей ссылке.',
+      earnedBonuses: 'Заработано бонусов',
+      earnedBonusesDesc: 'Бонусные недели, которые добавлены к вашей текущей подписке.',
+      topReferrals: 'Наши активные реферы',
+      showTop: 'Показаны 3 лучших рефера',
+      noReferrals: 'У вас пока нет активных рефералов. Поделитесь ссылкой, чтобы получить первые бонусы.',
+      openLink: 'Открыть ссылку',
+      copyLink: 'Скопировать',
+      copiedLink: 'Скопировано',
       howItWorks: {
         title: 'Как это работает',
+        desc: 'Пригласите друзей по личной ссылке. Как только они оформят подписку, вам автоматически начислится +2 недели VPN за каждого.',
         step1: {
           title: 'Получите реферальную ссылку',
           desc: 'Скопируйте вашу уникальную реферальную ссылку',
@@ -158,30 +204,24 @@ export const translations = {
         benefit2: 'Накопительная система вознаграждений',
         benefit3: 'Простое отслеживание рефералов',
       },
-      yourReferral: {
-        title: 'Ваша реферальная ссылка',
-        copy: 'Скопировать ссылку',
-        copied: 'Скопировано!',
-      },
-      stats: {
-        title: 'Ваша статистика',
-        referrals: 'Приглашено друзей',
-        bonus: 'Заработано бонусов',
-      },
     },
     privacy: {
       title: 'Политика конфиденциальности',
       lastUpdated: 'Последнее обновление',
     },
+    terms: {
+      title: 'Пользовательское соглашение',
+    },
     footer: {
       description: 'PartyShield - ваш надежный партнер в защите приватности',
+      linksSection: 'Ссылки',
+      languageSection: 'Язык',
       links: {
         privacy: 'Политика конфиденциальности',
-        terms: 'Условия использования',
-        about: 'О нас',
-        blog: 'Блог',
+        terms: 'Пользовательское соглашение',
       },
       social: 'Мы в социальных сетях',
+      copyright: 'Все права защищены.',
     },
   },
   en: {
@@ -230,6 +270,8 @@ export const translations = {
         usd: 'USD',
         rub: 'RUB',
       },
+      perMonth: '/month',
+      popular: 'Popular',
       plans: {
         basic: {
           name: 'Basic',
@@ -270,7 +312,7 @@ export const translations = {
         },
         business: {
           name: 'VIP',
-          price: { usd: '$7.9', rub: '₽799' },
+          price: { usd: '7.9', rub: '₽799' },
           features: [
             'Up to 10 simultaneous connections',
             'All current and new servers',
@@ -300,6 +342,9 @@ export const translations = {
         },
       },
       botButton: 'Open Bot in Telegram',
+      readyTitle: 'Ready to start?',
+      readyDesc: 'Open our Telegram bot and follow the simple instructions. Setup takes just a few minutes.',
+      openBot: 'Open @PartyShield_bot',
     },
     support: {
       title: 'Support Center',
@@ -307,21 +352,62 @@ export const translations = {
       telegram: {
         title: 'Telegram Support Group',
         link: 'Join Group',
+        desc: 'Join our Telegram support group for help and to connect with other users.',
       },
       videos: {
         title: 'Video Tutorials',
         desc: 'Step-by-step setup guides',
       },
+      openVideo: 'Open video',
       faq: {
         title: 'Frequently Asked Questions',
+        items: [
+          {
+            question: 'How to start using PartyShield?',
+            answer: 'Simply open our Telegram bot @PartyShield_bot, choose a plan and follow the instructions. Setup takes just a few minutes.',
+          },
+          {
+            question: 'Which devices does PartyShield work on?',
+            answer: 'PartyShield works on all major platforms: Windows, macOS, Linux, iOS, Android and other devices.',
+          },
+          {
+            question: 'Do you keep logs?',
+            answer: 'No, we do not log your activity. Your privacy is our priority.',
+          },
+          {
+            question: 'What is the connection speed?',
+            answer: 'Speed depends on your chosen plan. Premium users get maximum speed with priority access to servers.',
+          },
+          {
+            question: 'Can I use VPN on multiple devices?',
+            answer: 'Yes, the number of simultaneous connections depends on your plan. Basic plan supports 1 device, Premium up to 10.',
+          },
+          {
+            question: 'How to get support?',
+            answer: 'You can reach out to our Telegram support group or message @PartyShield_bot in the Support section. We respond 24/7.',
+          },
+        ],
       },
     },
     refer: {
       title: 'Referral Program',
       subtitle: 'Invite friends and earn rewards',
       description: 'Invite your friends to use PartyShield and earn rewards for each referred user.',
+      bonusMechanic: 'For each friend who subscribes, you get +2 weeks of VPN usage on your current plan.',
+      bonusAuto: 'Your bonus weeks are automatically added to your active subscription after the referred friend activates.',
+      activeReferrals: 'Active referrals',
+      activeReferralsDesc: 'Friends who have already subscribed using your link.',
+      earnedBonuses: 'Bonuses earned',
+      earnedBonusesDesc: 'Bonus weeks added to your current subscription.',
+      topReferrals: 'Our active referrals',
+      showTop: 'Showing top 3 referrals',
+      noReferrals: 'You have no active referrals yet. Share your link to earn bonuses.',
+      openLink: 'Open link',
+      copyLink: 'Copy',
+      copiedLink: 'Copied',
       howItWorks: {
         title: 'How it works',
+        desc: 'Invite friends via your personal link. Once they subscribe, you automatically get +2 weeks of VPN per referral.',
         step1: {
           title: 'Get your referral link',
           desc: 'Copy your unique referral link',
@@ -341,30 +427,24 @@ export const translations = {
         benefit2: 'Accumulative reward system',
         benefit3: 'Easy referral tracking',
       },
-      yourReferral: {
-        title: 'Your referral link',
-        copy: 'Copy link',
-        copied: 'Copied!',
-      },
-      stats: {
-        title: 'Your statistics',
-        referrals: 'Friends referred',
-        bonus: 'Bonuses earned',
-      },
     },
     privacy: {
       title: 'Privacy Policy',
       lastUpdated: 'Last updated',
     },
+    terms: {
+      title: 'Terms of Service',
+    },
     footer: {
       description: 'PartyShield - your reliable partner in privacy protection',
+      linksSection: 'Links',
+      languageSection: 'Language',
       links: {
         privacy: 'Privacy Policy',
         terms: 'Terms of Service',
-        about: 'About Us',
-        blog: 'Blog',
       },
       social: 'Follow us on social media',
+      copyright: 'All rights reserved.',
     },
   },
 } as const
@@ -372,4 +452,3 @@ export const translations = {
 export function getTranslations(lang: Language) {
   return translations[lang]
 }
-
