@@ -2,15 +2,17 @@
 # Static export with trailingSlash: true
 # All pages are directories with index.html (e.g. pricing/index.html)
 
-# Enable mod_rewrite
-RewriteEngine On
-
-# Redirect HTTP to HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Redirect HTTP to HTTPS (guarded so a missing module can't 500 the site)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
 
 # Disable directory listing
-Options -Indexes
+<IfModule mod_autoindex.c>
+  Options -Indexes
+</IfModule>
 
 # Security headers
 <IfModule mod_headers.c>
@@ -46,13 +48,21 @@ Options -Indexes
   AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
-# Block access to hidden files (except .well-known for SSL)
+# Block access to hidden files/dotfiles.
+# .well-known is safe: FilesMatch matches the basename, and files served from
+# .well-known (e.g. .well-known/acme-challenge/<token>) do not start with a dot.
+# Use version-aware syntax so this works on both Apache 2.2 and 2.4.
 <FilesMatch "^\.">
-  Require all denied
+  <IfModule mod_authz_core.c>
+    # Apache 2.4+
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    # Apache 2.2
+    Order allow,deny
+    Deny from all
+  </IfModule>
 </FilesMatch>
-<LocationMatch "^/\.well-known">
-  Require all granted
-</LocationMatch>
 
 # Custom 404 page
 ErrorDocument 404 /404.html
