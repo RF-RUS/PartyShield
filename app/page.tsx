@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Zap, Shield, Eye, HeadphonesIcon, CheckCircle2, Smartphone, Monitor, Tablet } from 'lucide-react'
+import { Zap, Shield, Eye, HeadphonesIcon, Star, Smartphone, Monitor, Tablet } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Home() {
@@ -26,23 +26,10 @@ export default function Home() {
     },
   ]
 
-  const testimonials = [
-    {
-      name: 'Алексей М.',
-      text: 'Использую PartyShield уже полгода. Скорость отличная, никаких проблем. Рекомендую!',
-      rating: 5,
-    },
-    {
-      name: 'Maria K.',
-      text: 'Лучший VPN, который я пробовала. Простая настройка и отличная поддержка.',
-      rating: 5,
-    },
-    {
-      name: 'Дмитрий С.',
-      text: 'Идеально для работы. Стабильное соединение и высокая скорость.',
-      rating: 5,
-    },
-  ]
+  const testimonials = t.home.testimonials.items.map((item) => ({
+    ...item,
+    rating: 5,
+  }))
 
   const devices = [
     { icon: Monitor, name: 'Windows' },
@@ -115,7 +102,7 @@ export default function Home() {
               >
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <CheckCircle2 key={i} className="w-5 h-5 text-yellow-400" />
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4">{testimonial.text}</p>

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Send } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { LanguageToggle } from '@/components/LanguageToggle'
+import { Logo } from '@/components/Logo'
 import { TELEGRAM_BOT_URL } from '@/lib/constants'
 
 export function Footer() {
@@ -14,11 +15,8 @@ export function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-neon-blue to-neon-purple rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">P</span>
-              </div>
-              <span className="text-xl font-bold text-gradient">PartyShield</span>
+            <div className="mb-4">
+              <Logo />
             </div>
             <p className="text-gray-400 text-sm mb-4">{t.footer.description}</p>
             <div className="flex items-center space-x-4">

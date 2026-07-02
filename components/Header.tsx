@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { LanguageToggle } from '@/components/LanguageToggle'
+import { Logo } from '@/components/Logo'
 
 export function Header() {
   const { t } = useLanguage()
@@ -24,11 +25,8 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-neon-blue to-neon-purple rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">P</span>
-            </div>
-            <span className="text-xl font-bold text-gradient">PartyShield</span>
+          <Link href="/" aria-label="PartyShield">
+            <Logo />
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
