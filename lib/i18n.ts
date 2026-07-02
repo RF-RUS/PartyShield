@@ -34,6 +34,20 @@ export const translations = {
       },
       testimonials: {
         title: 'Что говорят наши пользователи',
+        items: [
+          {
+            name: 'Алексей М.',
+            text: 'Использую PartyShield уже полгода. Скорость отличная, никаких проблем. Рекомендую!',
+          },
+          {
+            name: 'Мария К.',
+            text: 'Лучший VPN, который я пробовала. Простая настройка и отличная поддержка.',
+          },
+          {
+            name: 'Дмитрий С.',
+            text: 'Идеально для работы. Стабильное соединение и высокая скорость.',
+          },
+        ],
       },
       devices: {
         title: 'Работает на всех устройствах',
@@ -89,7 +103,7 @@ export const translations = {
         },
         business: {
           name: 'VIP',
-          price: { usd: '7.9', rub: '₽799' },
+          price: { usd: '$7.9', rub: '₽799' },
           features: [
             'До 10 одновременных подключений',
             'Все актуальные и новые серверы',
@@ -257,6 +271,20 @@ export const translations = {
       },
       testimonials: {
         title: 'What Our Users Say',
+        items: [
+          {
+            name: 'Alexey M.',
+            text: 'I have been using PartyShield for six months. The speed is excellent, no problems at all. Highly recommend!',
+          },
+          {
+            name: 'Maria K.',
+            text: 'The best VPN I have tried. Easy setup and great support.',
+          },
+          {
+            name: 'Dmitry S.',
+            text: 'Perfect for work. Stable connection and high speed.',
+          },
+        ],
       },
       devices: {
         title: 'Works on All Devices',
@@ -312,7 +340,7 @@ export const translations = {
         },
         business: {
           name: 'VIP',
-          price: { usd: '7.9', rub: '₽799' },
+          price: { usd: '$7.9', rub: '₽799' },
           features: [
             'Up to 10 simultaneous connections',
             'All current and new servers',
@@ -451,4 +479,21 @@ export const translations = {
 
 export function getTranslations(lang: Language) {
   return translations[lang]
+}
+
+// Localized, grammatically correct "N weeks" label.
+export function formatWeeks(lang: Language, count: number): string {
+  if (lang === 'en') {
+    return `${count} ${count === 1 ? 'week' : 'weeks'}`
+  }
+
+  const mod10 = count % 10
+  const mod100 = count % 100
+  let unit = 'недель'
+  if (mod10 === 1 && mod100 !== 11) {
+    unit = 'неделя'
+  } else if (mod10 >= 2 && mod10 <= 4 && (mod100 < 10 || mod100 >= 20)) {
+    unit = 'недели'
+  }
+  return `${count} ${unit}`
 }

@@ -27,6 +27,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setLangState(readSavedLanguage())
   }, [])
 
+  // Keep the document language in sync for accessibility and SEO.
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
+
   const setLang = (newLang: Language) => {
     setLangState(newLang)
     try {

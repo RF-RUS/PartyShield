@@ -14,6 +14,7 @@ export function LanguageToggle({ variant = 'icon' }: { variant?: 'icon' | 'full'
     return (
       <button
         onClick={toggleLanguage}
+        aria-label="Switch language"
         className="flex items-center space-x-2 px-4 py-2 rounded-lg glass hover:bg-white/10 transition-colors"
       >
         <Globe className="w-4 h-4" />
